@@ -19,7 +19,6 @@ public:
     cpp_int generatePrivateKey(int bits = 32);
     cpp_int generatePublicKey(const cpp_int& privateKey);
     cpp_int computeSharedSecret(const cpp_int& otherPublicKey, const cpp_int& privateKey);
-
     static cpp_int modPow(cpp_int base, cpp_int exp, const cpp_int& mod);
     static bool isPrime(const cpp_int& n, int iterations = 10);
     static cpp_int generatePrime(int bits);
