@@ -82,10 +82,8 @@ bool DiffieHellman::isPrime(const cpp_int& n, int iterations) {
         d /= 2;
         r++;
     }
-
     static std::random_device rd;
     static std::mt19937_64 gen(rd());
-
     for (int i = 0; i < iterations; i++) {
         cpp_int a = 2 + (cpp_int(gen()) % (n - 3));
         cpp_int x = modPow(a, d, n);
